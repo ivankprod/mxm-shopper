@@ -2,9 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="height=device-height, width=device-width, initial-scale=1.0"
+		/>
 
-		<link rel="stylesheet" href="./static/fonts/Montserrat/stylesheet.css" />
+		<link
+			rel="stylesheet"
+			href="./static/fonts/Montserrat/stylesheet.css"
+		/>
 		<link rel="stylesheet" href="./static/styles.css" />
 
 		<title>Shopper</title>
@@ -12,60 +18,65 @@
 	<body>
 		<div class="wrapper">
 			<header class="header">
-				<a class="logo" href="#">
-					<span class="logo__text_color-main">Shop</span>per
-				</a>
-				<nav class="nav">
+				<div class="header_section">
+					<a class="logo" href="#">
+						<span class="logo__text_color-main">Shop</span>per
+					</a>
+					<div class="header__aside">
+						<form class="search-form">
+							<input
+								class="search-form__input"
+								type="text"
+								size="18"
+								placeholder="Search Items"
+							/>
+							<button class="search-form__button">
+								<img
+									src="./static/svg/search.svg"
+									height="21"
+									width="21"
+									draggable="false"
+									alt="search"
+								/>
+							</button>
+						</form>
+						<button class="aside__button">
+							<img class="aside__button-icon"
+								src="./static/svg/cart.svg"
+								height="20"
+								width="16"
+								draggable="false"
+								alt="cart"
+							/>
+							0 Items Added
+						</button>
+						<button class="aside__button aside__button_login">
+							<img class="aside__button-icon"
+								src="./static/svg/profile.svg"
+								height="20"
+								width="16"
+								draggable="false"
+								alt="profile"
+							/>
+							Login or Sign Up
+						</button>
+					</div>
+				</div>
+				<nav class="header_section nav">
 					<ul class="nav__list">
-						<li class="nav__link"><a href="#">Home</a></li>
-						<li class="nav__link"><a href="#">Menu</a></li>
-						<li class="nav__link"><a href="#">Contact</a></li>
-						<li class="nav__link"><a href="#">Shop</a></li>
+						<li class="nav__link"><a href="#">Features</a></li>
+						<li class="nav__link"><a href="#">Products</a></li>
+						<li class="nav__link"><a href="#">Blog</a></li>
+						<li class="nav__link"><a href="#">About</a></li>
 					</ul>
 				</nav>
-				<div class="header__aside">
-					<form class="search-form">
-						<img
-							class="search-form__icon"
-							src="./static/svg/search.svg"
-							height="18"
-							width="18"
-							draggable="false"
-							alt="search"
-						/>
-						<input
-							class="search-form__input"
-							type="text"
-							size="11"
-							placeholder="Search"
-						/>
-					</form>
-				</div>
 			</header>
 			<main class="content">
 				<section class="section_left">
-					<div class="actions">
-						<button class="actions__order-btn">Order Now</button>
-					</div>
-					<div class="rating">
-						<div>
-							<img src="./static/svg/star.svg" draggable="false" alt="star" />
-							<img src="./static/svg/star.svg" draggable="false" alt="star" />
-							<img src="./static/svg/star.svg" draggable="false" alt="star" />
-							<img src="./static/svg/star.svg" draggable="false" alt="star" />
-							<img src="./static/svg/star.svg" draggable="false" alt="star" />
-						</div>
-						<div class="rating__range">5 star rating</div>
-						<div class="rating__reviews">based on 1788 reviews</div>
-					</div>
+					
 				</section>
 				<section class="section_right">
-					<img
-						src="./static/img/food.png"
-						height="712"
-						width="750"
-						alt="food"
-					/>
+					
 				</section>
 			</main>
 		</div>
