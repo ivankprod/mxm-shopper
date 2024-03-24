@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./static/fonts/Montserrat/stylesheet.css" />
+		<link rel="stylesheet" href="./static/styles.css" />
+
+		<title>Shopper</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<a class="logo" href="#">
+					<span class="logo__text_color-main">Shop</span>per
+				</a>
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__link"><a href="#">Home</a></li>
+						<li class="nav__link"><a href="#">Menu</a></li>
+						<li class="nav__link"><a href="#">Contact</a></li>
+						<li class="nav__link"><a href="#">Shop</a></li>
+					</ul>
+				</nav>
+				<div class="header__aside">
+					<form class="search-form">
+						<img
+							class="search-form__icon"
+							src="./static/svg/search.svg"
+							height="18"
+							width="18"
+							draggable="false"
+							alt="search"
+						/>
+						<input
+							class="search-form__input"
+							type="text"
+							size="11"
+							placeholder="Search"
+						/>
+					</form>
+				</div>
+			</header>
+			<main class="content">
+				<section class="section_left">
+					<div class="actions">
+						<button class="actions__order-btn">Order Now</button>
+					</div>
+					<div class="rating">
+						<div>
+							<img src="./static/svg/star.svg" draggable="false" alt="star" />
+							<img src="./static/svg/star.svg" draggable="false" alt="star" />
+							<img src="./static/svg/star.svg" draggable="false" alt="star" />
+							<img src="./static/svg/star.svg" draggable="false" alt="star" />
+							<img src="./static/svg/star.svg" draggable="false" alt="star" />
+						</div>
+						<div class="rating__range">5 star rating</div>
+						<div class="rating__reviews">based on 1788 reviews</div>
+					</div>
+				</section>
+				<section class="section_right">
+					<img
+						src="./static/img/food.png"
+						height="712"
+						width="750"
+						alt="food"
+					/>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>
