@@ -710,3 +710,117 @@ p {
 .content-sellers__tabs {
 	margin-top: 55px;
 }
+
+.sellers-tabs_content {
+	display: flex;
+	justify-content: space-between;
+
+	width: 100%;
+
+	margin-top: 92px;
+}
+
+.card-wrapper {
+	width: 361px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+
+	position: relative;
+
+	margin-bottom: 29px;
+	padding: 21px;
+
+	border-radius: 15px;
+}
+
+.card_color_mint-cream {
+	background: #ecfef4;
+}
+
+.card_color_light-cyan {
+	background: #c9f2ff;
+}
+
+.card_color_light-mallow {
+	background: #e5d5ff;
+}
+
+.card__photo-img {
+	margin-bottom: 21px;
+
+	object-fit: contain;
+}
+
+.card__info-title {
+	font-size: 21px;
+	font-weight: 500;
+	line-height: 35px;
+}
+
+.card__info {
+	padding: 31px 52px;
+
+	background: #fff;
+
+	border-radius: 15px;
+}
+
+.card__info-rating {
+	display: flex;
+	align-items: center;
+}
+
+.rating__stars img + img {
+	margin-left: -4px;
+}
+
+.rating__reviews {
+	margin-left: 8px;
+
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 35px;
+
+	color: #888;
+}
+
+.card__info-price {
+	margin-top: 4px;
+
+	font-size: 21px;
+	font-weight: 600;
+	line-height: 26px;
+}
+
+.card__discount {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	top: 19px;
+	right: 19px;
+
+	height: 100px;
+	width: 100px;
+
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22px;
+	text-align: center;
+
+	border-radius: 50%;
+}
+
+.card__discount_color_primary {
+	color: #fff;
+
+	background: var(--color-theme-primary);
+}
+
+.card-btn {
+	width: 100%;
+}
