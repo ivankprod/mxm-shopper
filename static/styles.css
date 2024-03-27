@@ -60,6 +60,10 @@ button {
 	cursor: pointer;
 }
 
+button[disabled] {
+	pointer-events: none;
+}
+
 h1,
 h2,
 h3 {
@@ -109,8 +113,17 @@ p {
 	background: #10b981;
 }
 
-.tabs__wrapper {
+.tabs {
 	display: flex;
+}
+
+.tabs-content {
+	display: flex;
+	justify-content: space-between;
+
+	width: 100%;
+
+	margin-top: 92px;
 }
 
 .tab {
@@ -709,15 +722,6 @@ p {
 
 .content-sellers__tabs {
 	margin-top: 55px;
-}
-
-.sellers-tabs_content {
-	display: flex;
-	justify-content: space-between;
-
-	width: 100%;
-
-	margin-top: 92px;
 }
 
 .card-wrapper {
