@@ -117,12 +117,34 @@ p {
 	display: flex;
 }
 
-.tabs-content {
+.tabs-content,
+.tabs-wrapper {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 
 	width: 100%;
+}
 
+.tabs-wrapper__button_left {
+	transform: rotate(180deg);
+}
+
+.tabs-pg-btn {
+	width: 60px;
+}
+
+.tabs-pg-btn img {
+	filter: invert(51%) sepia(55%) saturate(2370%) hue-rotate(125deg) brightness(97%) contrast(87%);
+}
+
+.tabs-pg-btn[disabled] img {
+	filter: none;
+
+	opacity: 20%;
+}
+
+.tabs-content {
 	margin-top: 92px;
 }
 
