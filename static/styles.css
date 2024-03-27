@@ -124,6 +124,7 @@ p {
 	align-items: center;
 
 	width: 100%;
+	width: calc(100% + 120px);
 }
 
 .tabs-wrapper__button_left {
@@ -132,10 +133,12 @@ p {
 
 .tabs-pg-btn {
 	width: 60px;
+	min-width: 60px; /* Без этого правила ширина меньше 60px */
 }
 
 .tabs-pg-btn img {
-	filter: invert(51%) sepia(55%) saturate(2370%) hue-rotate(125deg) brightness(97%) contrast(87%);
+	filter: invert(51%) sepia(55%) saturate(2370%) hue-rotate(125deg)
+		brightness(97%) contrast(87%);
 }
 
 .tabs-pg-btn[disabled] img {
