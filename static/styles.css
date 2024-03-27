@@ -764,6 +764,18 @@ p {
 	background: #e5d5ff;
 }
 
+.card_color_dark-blue-alice {
+	background: #e0efff;
+}
+
+.card_color_light-blue-alice {
+	background: #e8f9ff;
+}
+
+.card_color_paleturquoise {
+	background: #d3fbfb;
+}
+
 .card__photo-img {
 	margin-bottom: 21px;
 
