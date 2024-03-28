@@ -13,6 +13,8 @@
 		/>
 		<link rel="stylesheet" href="./static/styles.css" />
 
+		<script src="./static/main.js" defer></script>
+
 		<title>Shopper</title>
 	</head>
 	<body>
@@ -63,6 +65,16 @@
 							Login or Sign Up
 						</button>
 					</div>
+					<button class="mobile-nav-btn_open">
+						<img
+							class="mobile-nav-btn_open__img"
+							src="./static/svg/burger-menu.svg"
+							height="38"
+							width="38"
+							draggable="false"
+							alt="burger menu"
+						/>
+					</button>
 				</div>
 				<nav class="header_section nav">
 					<ul class="nav__list">
@@ -73,6 +85,40 @@
 					</ul>
 				</nav>
 			</header>
+			<section class="nav_mobile">
+				<div class="nav_mobile__shadow"></div>
+				<div class="nav_mobile__menu">
+					<div class="nav_mobile__menu-btn">
+						<button class="mobile-nav-btn_close">
+							<img
+								class="mobile-nav-btn_close__img"
+								src="./static/svg/close.svg"
+								height="52"
+								width="52"
+								draggable="false"
+								alt="close menu"
+							/>
+						</button>
+					</div>
+					<form class="search-form" onsubmit="return false;">
+						<input
+							class="search-form__input"
+							type="text"
+							size="18"
+							placeholder="Search Items"
+						/>
+						<button class="search-form__button">
+							<img
+								src="./static/svg/search.svg"
+								height="21"
+								width="21"
+								draggable="false"
+								alt="search"
+							/>
+						</button>
+					</form>
+				</div>
+			</section>
 			<section class="content content-info">
 				<div class="content-info__side_left">
 					<h1>Discover Our Latest Products</h1>
