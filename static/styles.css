@@ -124,10 +124,15 @@ p {
 	align-items: center;
 
 	width: 100%;
-	width: calc(100% + 120px);
+
+	@media screen and (width >= 1560px) {
+		width: calc(100% + 120px);
+	}
 
 	@media screen and (width <= 768px) {
 		flex-direction: column;
+
+		width: 100%;
 	}
 }
 
@@ -139,7 +144,7 @@ p {
 	width: 60px;
 	min-width: 60px; /* Без этого правила ширина меньше 60px */
 
-	@media screen and (width <= 768px) {
+	@media screen and (width <= 1439px) {
 		display: none;
 	}
 }
@@ -153,10 +158,6 @@ p {
 	filter: none;
 
 	opacity: 20%;
-}
-
-.tabs-content {
-	margin-top: 92px;
 }
 
 .tab {
@@ -188,6 +189,11 @@ p {
 	width: 100%;
 
 	margin-top: 92px;
+
+	@media screen and (width <= 1439px) {
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+	}
 }
 
 .ontop {
@@ -204,11 +210,6 @@ p {
 	background: #fff;
 
 	width: 100%;
-	min-width: 1440px;
-
-	@media screen and (width <= 1439px) {
-		min-width: unset;
-	}
 
 	@media screen and (width <= 768px) {
 		min-width: 360px;
@@ -220,7 +221,7 @@ p {
 	margin: 37px auto 76px auto;
 	padding: 0 86px;
 
-	width: 1440px;
+	max-width: 1440px;
 
 	@media screen and (width <= 1439px) {
 		width: 100%;
@@ -891,6 +892,10 @@ p {
 
 .card-wrapper {
 	width: 361px;
+}
+
+.card-wrapper + .card-wrapper {
+	margin-left: 24px;
 }
 
 .card {
