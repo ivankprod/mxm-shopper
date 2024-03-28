@@ -13,6 +13,8 @@
 		/>
 		<link rel="stylesheet" href="./static/styles.css" />
 
+		<script src="./static/main.js" defer></script>
+
 		<title>Shopper</title>
 	</head>
 	<body>
@@ -63,6 +65,15 @@
 							Login or Sign Up
 						</button>
 					</div>
+					<button class="mobile-nav-btn_open">
+						<img
+							src="./static/svg/burger-menu.svg"
+							height="38"
+							width="38"
+							draggable="false"
+							alt="burger menu"
+						/>
+					</button>
 				</div>
 				<nav class="header_section nav">
 					<ul class="nav__list">
@@ -73,9 +84,57 @@
 					</ul>
 				</nav>
 			</header>
+			<section class="nav_mobile animate-fadein-css">
+				<div class="nav_mobile__shadow"></div>
+				<div class="nav_mobile__menu animate-slidein-css">
+					<button class="mobile-nav-btn_close">
+						<img
+							src="./static/svg/close.svg"
+							height="52"
+							width="52"
+							draggable="false"
+							alt="close menu"
+						/>
+					</button>
+					<form
+						class="search-form search-form_mobile"
+						onsubmit="return false;"
+					>
+						<input
+							class="search-form__input search-form__input_mobile"
+							type="text"
+							size="28"
+							placeholder="Search Items"
+						/>
+						<button class="search-form__button">
+							<img
+								src="./static/svg/search.svg"
+								height="21"
+								width="21"
+								draggable="false"
+								alt="search"
+							/>
+						</button>
+					</form>
+					<ul class="nav__list nav_mobile__list">
+						<li class="nav__link nav_mobile__link">
+							<a href="#">Features</a>
+						</li>
+						<li class="nav__link nav_mobile__link">
+							<a href="#">Products</a>
+						</li>
+						<li class="nav__link nav_mobile__link">
+							<a href="#">Blog</a>
+						</li>
+						<li class="nav__link nav_mobile__link">
+							<a href="#">About</a>
+						</li>
+					</ul>
+				</div>
+			</section>
 			<section class="content content-info">
 				<div class="content-info__side_left">
-					<h1>Discover Our Latest Products</h1>
+					<h1 class="content__h1">Discover Our Latest Products</h1>
 					<p class="content__description">
 						Lorem ipsum is a placeholder text commonly used to
 						demonstrate the visual form of a product
@@ -224,7 +283,7 @@
 				</div>
 			</section>
 			<section class="content content-sellers">
-				<h3>Top Sellers</h3>
+				<h3 class="content__h3">Top Sellers</h3>
 				<div class="tabs content__tabs">
 					<button class="tab tab_active ontop" disabled>
 						Top Picks
@@ -419,7 +478,7 @@
 				</div>
 			</section>
 			<section class="content content-trending">
-				<h3>Trending Earphones</h3>
+				<h3 class="content__h3">Trending Earphones</h3>
 				<div class="tabs content__tabs">
 					<button class="tab tab_active ontop" disabled>
 						Earbuds
