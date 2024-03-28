@@ -257,6 +257,10 @@ p {
 	@media screen and (width <= 1439px) {
 		width: 100%;
 	}
+
+	@media screen and (width <= 1199px) {
+		padding: 0 48px;
+	}
 }
 
 .content {
@@ -518,7 +522,7 @@ p {
 	position: absolute;
 
 	top: 51px;
-	right: 86px;
+	right: 48px;
 }
 
 .nav_mobile__list {
