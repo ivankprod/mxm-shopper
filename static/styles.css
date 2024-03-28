@@ -320,6 +320,10 @@ p {
 	@media screen and (width <= 767px) {
 		display: none;
 	}
+
+	@media screen and (height <= 589px) {
+		display: none;
+	}
 }
 
 .search-form__input {
@@ -488,6 +492,8 @@ p {
 
 	z-index: 3;
 
+	overflow-y: auto;
+
 	@media screen and (width >= 1200px) {
 		display: none !important;
 	}
@@ -495,6 +501,7 @@ p {
 
 .nav_mobile__shadow {
 	height: 100%;
+	min-height: 589px;
 	width: 100%;
 
 	background: #000;
@@ -510,6 +517,7 @@ p {
 	justify-content: center;
 
 	height: 100%;
+	min-height: 589px;
 	width: 60%;
 
 	padding: 37px 86px;
