@@ -3,7 +3,6 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-//const CopyPlugin = require("copy-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { SubresourceIntegrityPlugin } = require("webpack-subresource-integrity");
@@ -18,23 +17,23 @@ module.exports = {
 	context: path.resolve(__dirname, "./src"),
 
 	entry: {
-		app: "./main.js",
+		app: "./main.js"
 	},
 
 	output: {
 		path: path.resolve(__dirname, "./build"),
 		filename: "static/js/[name].[contenthash].js",
 		assetModuleFilename: "static/[path][name].[contenthash][ext]",
-		crossOriginLoading: "anonymous",
+		crossOriginLoading: "anonymous"
 	},
 
 	optimization: isDev ? {
 		realContentHash: true,
-		minimize: false,
+		minimize: false
 	} : {
 		realContentHash: true,
 		minimize: true,
-		minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
+		minimizer: [new CssMinimizerPlugin(), new TerserPlugin()]
 	},
 
 	cache: false,
@@ -45,21 +44,18 @@ module.exports = {
 			publicPath: "./",
 			inject: true,
 			scriptLoading: "defer",
-			minify: false,
+			minify: false
+		}),
+		new SubresourceIntegrityPlugin({
+			hashFuncNames: ["sha256"],
+			enabled: false // Странно, что не работает больше (ошибка ENOENT), похоже на баг
 		}),
 		new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: ['./static'] }),
 		new MiniCssExtractPlugin({
 			filename: "./static/css/[name].[contenthash].css",
-			ignoreOrder: false,
-		}),
-	].concat(
-		isDev ? [] : [
-			new SubresourceIntegrityPlugin({
-				enabled: true,
-				hashFuncNames: ["sha256"],
-			})
-		]
-	),
+			ignoreOrder: false
+		})
+	],
 
 	module: {
 		rules: [
@@ -69,10 +65,7 @@ module.exports = {
 					MiniCssExtractPlugin.loader,
 					{
 						loader: "css-loader",
-						options: {
-							importLoaders: 1,
-							sourceMap: isDev
-						}
+						options: { sourceMap: isDev }
 					},
 					{
 						loader: "postcss-loader",
@@ -98,16 +91,14 @@ module.exports = {
 			},
 			{
 				test: /\.html$/,
-				use: {
-					loader: 'html-loader',
-				}
+				loader: "html-loader"
 			}
-		],
+		]
 	},
 
 	devServer: {
 		static: { directory: path.resolve(__dirname, "./build") },
 		compress: true,
 		port: 3000
-	},
+	}
 };
