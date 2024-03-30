@@ -25,12 +25,12 @@ module.exports = {
 		path: path.resolve(__dirname, "./build"),
 		filename: "static/js/[name].[contenthash].js",
 		assetModuleFilename: "static/[path][name].[contenthash][ext]",
-		crossOriginLoading: "anonymous",
+		crossOriginLoading: "anonymous"
 	},
 
 	optimization: isDev ? {
 		realContentHash: true,
-		minimize: false,
+		minimize: false
 	} : {
 		realContentHash: true,
 		minimize: true,
@@ -81,17 +81,17 @@ module.exports = {
 			template: path.resolve(__dirname, "./public/index.html"),
 			publicPath: "./",
 			scriptLoading: "defer",
-			minify: false,
+			minify: false
 		}),
 		new SubresourceIntegrityPlugin({
 			hashFuncNames: ["sha256"],
-			enabled: !isDev,
+			enabled: !isDev
 		}),
 		new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: ["./static"] }),
 		new MiniCssExtractPlugin({
 			filename: "static/css/[name].[contenthash].css",
-			ignoreOrder: false,
-		}),
+			ignoreOrder: false
+		})
 	],
 
 	module: {
@@ -102,41 +102,41 @@ module.exports = {
 					MiniCssExtractPlugin.loader,
 					{
 						loader: "css-loader",
-						options: { sourceMap: isDev },
+						options: { sourceMap: isDev }
 					},
 					{
 						loader: "postcss-loader",
-						options: { postcssOptions: postcssConfig },
+						options: { postcssOptions: postcssConfig }
 					},
 					{
 						loader: "sass-loader",
-						options: { sourceMap: isDev },
-					},
-				],
+						options: { sourceMap: isDev }
+					}
+				]
 			},
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
 					loader: "babel-loader",
-					options: babelConfig,
-				},
+					options: babelConfig
+				}
 			},
 			{
 				test: /\.html$/,
 				loader: "html-loader",
-				options: { minimize: false },
-			},
-			{
+				options: { minimize: false }
+			}
+			/*{
 				test: /\.(png|jpe?g|gif|svg)$/,
-				type: "asset",
-			},
+				type: "asset"
+			}*/
 		],
 	},
 
 	devServer: {
 		static: { directory: path.resolve(__dirname, "./build") },
 		compress: true,
-		port: 3000,
-	},
+		port: 3000
+	}
 };
