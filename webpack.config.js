@@ -87,7 +87,7 @@ module.exports = {
 			hashFuncNames: ["sha256"],
 			enabled: !isDev
 		}),
-		new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: ["./static"] }),
+		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: "static/css/[name].[contenthash].css",
 			ignoreOrder: false
