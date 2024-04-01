@@ -135,6 +135,12 @@ p {
 	animation: fadeIn 100ms linear;
 }
 
+.animate-fadein-long-css {
+	backface-visibility: hidden;
+	will-change: opacity;
+	animation: fadeIn 1200ms linear;
+}
+
 .animate-slidein-css {
 	backface-visibility: hidden;
 	will-change: width;
