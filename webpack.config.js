@@ -18,7 +18,7 @@ module.exports = {
 	context: path.resolve(__dirname, "./src"),
 
 	entry: {
-		app: "./main.js",
+		app: "./js/main.js",
 	},
 
 	output: {
@@ -126,11 +126,11 @@ module.exports = {
 				test: /\.html$/,
 				loader: "html-loader",
 				options: { minimize: false }
-			}
-			/*{
+			},
+			{
 				test: /\.(png|jpe?g|gif|svg)$/,
 				type: "asset"
-			}*/
+			}
 		]
 	},
 
