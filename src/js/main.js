@@ -1,7 +1,8 @@
 import "../scss/styles.scss";
 
-import Tabs from "./tabs";
-import { cardsSellers, cardsTrending } from "./tabs/cards";
+import Popup from "./components/popup/Popup";
+import Tabs from "./components/Tabs";
+import { cardsSellers, cardsTrending } from "./components/Tabs/Cards";
 
 window.addEventListener("DOMContentLoaded", () => {
 	document
@@ -15,6 +16,8 @@ window.addEventListener("DOMContentLoaded", () => {
 		?.addEventListener("click", () => {
 			document.querySelector(".nav_mobile").style.display = "none";
 		});
+
+	Popup();
 
 	const tabsSellers = new Tabs(
 		document.querySelector(".content-sellers"),
