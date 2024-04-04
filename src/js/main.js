@@ -1,9 +1,9 @@
-import "../scss/styles.scss";
+import "styles.scss";
 
-import Popup from "./components/Popup";
-import Tabs from "./components/Tabs";
+import Popup from "components/Popup";
+import Tabs from "components/Tabs";
 
-import { cardsSellers, cardsTrending } from "./components/Tabs/Cards";
+import { cardsSellers, cardsTrending } from "components/Tabs/Cards";
 
 window.addEventListener("DOMContentLoaded", () => {
 	document

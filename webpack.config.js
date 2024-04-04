@@ -134,6 +134,16 @@ module.exports = {
 		]
 	},
 
+	resolve: {
+		extensions: [ ".js", ".scss", "*" ],
+		modules: [
+			path.resolve(__dirname, "./src/js"),
+			path.resolve(__dirname, "./src/scss"),
+			path.resolve(__dirname, "./src/assets"),
+			"node_modules"
+		]
+	},
+
 	devServer: {
 		static: { directory: path.resolve(__dirname, "./build") },
 		compress: true,
