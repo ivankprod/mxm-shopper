@@ -1,3 +1,5 @@
+import "./Tabs.scss";
+
 export default class Tabs {
 	constructor(parentContentElement, cards) {
 		this.tabs = parentContentElement.querySelectorAll(".tabs .tab");
