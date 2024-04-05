@@ -1,12 +1,12 @@
-import imageStarRating from "svg/star_rating.svg";
+import imageStarRating from "assets/svg/star_rating.svg";
 
-import imageSellers1 from "img/sellers/1.png";
-import imageSellers2 from "img/sellers/2.png";
-import imageSellers3 from "img/sellers/3.png";
+import imageSellers1 from "assets/img/sellers/1.png";
+import imageSellers2 from "assets/img/sellers/2.png";
+import imageSellers3 from "assets/img/sellers/3.png";
 
-import imageTrending1 from "img/trending/1.png";
-import imageTrending2 from "img/trending/2.png";
-import imageTrending3 from "img/trending/3.png";
+import imageTrending1 from "assets/img/trending/1.png";
+import imageTrending2 from "assets/img/trending/2.png";
+import imageTrending3 from "assets/img/trending/3.png";
 
 export const cardsSellers = `
 <div class="card-wrapper animate-fadein-long-css">

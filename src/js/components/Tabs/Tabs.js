@@ -16,6 +16,8 @@ export default class Tabs {
 
 		this.tabsButtons[0].addEventListener("click", () => this.prev());
 		this.tabsButtons[1].addEventListener("click", () => this.next());
+
+		this.play(0);
 	}
 
 	play(index) {
