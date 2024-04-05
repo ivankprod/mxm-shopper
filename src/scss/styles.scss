@@ -1,7 +1,7 @@
-@import "fonts/Montserrat/stylesheet.css";
+@import "assets/fonts/Montserrat/stylesheet.css";
 
-@import "base";
-@import "reset";
+@import "scss/base";
+@import "scss/reset";
 
 .wrapper {
 	position: relative;
@@ -61,12 +61,3 @@
 		line-height: 54px;
 	}
 }
-
-@import "sections/header";
-@import "sections/mobile-nav";
-
-@import "sections/content-info";
-@import "sections/content-products-launches";
-@import "sections/content-sellers-trending";
-
-@import "sections/footer";

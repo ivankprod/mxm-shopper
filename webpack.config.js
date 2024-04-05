@@ -135,11 +135,10 @@ module.exports = {
 	},
 
 	resolve: {
-		extensions: [ ".js", ".scss", "*" ],
+		extensions: [ ".js", ".scss", ".svg", ".png", "*" ],
 		modules: [
 			path.resolve(__dirname, "./src/js"),
-			path.resolve(__dirname, "./src/scss"),
-			path.resolve(__dirname, "./src/assets"),
+			path.resolve(__dirname, "./src"),
 			"node_modules"
 		]
 	},
