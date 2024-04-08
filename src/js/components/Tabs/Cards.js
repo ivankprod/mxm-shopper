@@ -56,9 +56,9 @@ const defaultsTrending = [
 ];
 
 export const getCardsSellers = async () => {
-	const dataSellers = await getData("get-cards", "type=sellers") || defaultsSellers;
+	const dataSellers = await getData("cards/get", "type=sellers") || defaultsSellers;
 
-	return dataSellers.reduce((html, data, i) => html + `
+	return { cards: dataSellers, html: dataSellers.reduce((html, data, i) => html + `
 		<div class="card-wrapper animate-fadein-long-css">
 			<div class="card card_color_${data.color}">
 				<img
@@ -109,17 +109,20 @@ export const getCardsSellers = async () => {
 					Save ${data.discount}<br />%
 				</div>` : ``}
 			</div>
-			<button class="button button_color_green card-btn">
+			<button
+				class="button button_color_green card-btn"
+				data-item="sellers:${i}"
+			>
 				Add to cart
 			</button>
 		</div>
-	`, "");
+	`, "") };
 }
 
 export const getCardsTrending = async () => {
-	const dataTrending = await getData("get-cards", "type=trending") || defaultsTrending;
+	const dataTrending = await getData("cards/get", "type=trending") || defaultsTrending;
 
-	return dataTrending.reduce((html, data, i) => html + `
+	return { cards: dataTrending, html: dataTrending.reduce((html, data, i) => html + `
 		<div class="card-wrapper animate-fadein-long-css">
 			<div class="card card_color_${data.color}">
 				<img
@@ -170,9 +173,12 @@ export const getCardsTrending = async () => {
 					Save ${data.discount}<br />%
 				</div>` : ``}
 			</div>
-			<button class="button button_color_green card-btn">
+			<button
+				class="button button_color_green card-btn"
+				data-item="trending:${i}"
+			>
 				Add to cart
 			</button>
 		</div>
-	`, "");
+	`, "") };
 }

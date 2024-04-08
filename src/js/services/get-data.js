@@ -3,7 +3,7 @@ export const getData = async (url, params) => {
 
 	try {
 		const resp = await fetch(
-			`http://127.0.0.1:8000/${url}?c=${String(
+			`${process.env.API_URL}/${url}?c=${String(
 				Math.floor(Math.random() * 100)
 			)}&${params}`
 		);
