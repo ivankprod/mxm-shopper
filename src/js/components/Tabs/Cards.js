@@ -18,7 +18,7 @@ const defaultsSellers = [
 		title: "Boat Rockerz 333",
 		reviews: 75,
 		price: 20,
-		discount: "60",
+		discount: 60,
 		color: "mint-cream"
 	}, {
 		title: "Boat kerz 234",
@@ -29,7 +29,7 @@ const defaultsSellers = [
 		title: "Boat Rockerz 323",
 		reviews: 75,
 		price: 30,
-		discount: "40",
+		discount: 40,
 		color: "light-mallow"
 	}
 ];
@@ -39,7 +39,7 @@ const defaultsTrending = [
 		title: "Boat Rockerz 333",
 		reviews: 75,
 		price: 20,
-		discount: "60",
+		discount: 60,
 		color: "dark-blue-alice"
 	}, {
 		title: "Boat kerz 234",
@@ -50,7 +50,7 @@ const defaultsTrending = [
 		title: "Boat Rockerz 323",
 		reviews: 75,
 		price: 30,
-		discount: "40",
+		discount: 40,
 		color: "paleturquoise"
 	}
 ];
