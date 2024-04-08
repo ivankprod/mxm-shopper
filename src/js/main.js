@@ -10,7 +10,7 @@ import ContentLaunches from "sections/content-launches";
 import Footer from "sections/footer";
 
 import Tabs from "components/Tabs";
-import { cardsSellers, cardsTrending } from "components/Tabs/Cards";
+import { getCardsSellers, getCardsTrending } from "components/Tabs/Cards";
 
 import Popup from "components/Popup";
 
@@ -29,12 +29,12 @@ Promise.all([
 	new ContentInfo(["content", "content-info"])?.create(),
 	new ContentProducts(["content", "content-products"])?.create(),
 	new ContentSellers(["content", "content-sellers"])?.create()
-		.then(self => {
-			new Tabs(self.elem, cardsSellers);
+		.then(async (self) => {
+			new Tabs(self.elem, await getCardsSellers());
 		}),
 	new ContentTrending(["content", "content-trending"])?.create()
-		.then(self => {
-			new Tabs(self.elem, cardsTrending);
+		.then(async (self) => {
+			new Tabs(self.elem, await getCardsTrending());
 		}),
 	new ContentLaunches(["content", "content-launches"])?.create(),
 	new Footer(["footer"])?.create()
@@ -42,3 +42,4 @@ Promise.all([
 			Popup();
 		})
 ]);
+
