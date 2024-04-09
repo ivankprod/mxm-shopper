@@ -5,6 +5,8 @@ import svgCart from "assets/svg/cart";
 import svgProfile from "assets/svg/profile";
 import svgBurgerMenu from "assets/svg/burger-menu";
 
+import getData from "services/get-data";
+
 import "scss/sections/header";
 
 export default class Header extends ElemHTML {
@@ -13,6 +15,8 @@ export default class Header extends ElemHTML {
 	}
 
 	async create() {
+		const cartItems = await getData("cart/get") || [];
+
 		this.setContent(`
 			<div class="header-section">
 				<a class="logo" href="#">
@@ -45,7 +49,7 @@ export default class Header extends ElemHTML {
 							draggable="false"
 							alt="cart"
 						/>
-						0 Items Added
+						${cartItems.length} Items Added
 					</button>
 					<button class="aside__button aside__button_login">
 						<img

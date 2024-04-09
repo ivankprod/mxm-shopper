@@ -4,6 +4,8 @@ import imageEarphones1 from "assets/img/earphones/1";
 import imageEarphones2 from "assets/img/earphones/2";
 import imageEarphones3 from "assets/img/earphones/3";
 
+import postData from "services/post-data";
+
 import "scss/sections/content-products-launches";
 
 export default class ContentProducts extends ElemHTML {
@@ -62,6 +64,13 @@ export default class ContentProducts extends ElemHTML {
 				</div>
 			</div>
 		`);
+
+		this.elem.querySelector("button.cart-btn").addEventListener("click", async () => {
+			alert(await postData("cart/add", {
+				title: "Apple wireless Airpod",
+				price: 45.99
+			}));
+		});
 
 		return this.render(".wrapper");
 	}

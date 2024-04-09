@@ -10,7 +10,7 @@ export default class Tabs {
 
 		this.activeIndex = 0;
 		this.tabsCount = this.tabs.length;
-		this.cards = cards;
+		this.content = cards;
 
 		[...this.tabs].map((tab, i) => {
 			tab.addEventListener("click", () => this.play(i));
@@ -25,13 +25,13 @@ export default class Tabs {
 	play(index) {
 		if (index < 0 || index > this.tabsCount - 1) return;
 
-		this.tabsContent.innerHTML = this.cards.html;
+		this.tabsContent.innerHTML = this.content.html;
 
-		[...this.tabsContent.querySelectorAll(".card-btn")].map(button => {
+		[...this.tabsContent.querySelectorAll("button.card-btn")].map(button => {
 			button.addEventListener("click", async (e) => {
 				const [_, index] = e.currentTarget.dataset.item.split(":");
 
-				console.log(await postData("cart/add", this.cards.cards[index]));
+				alert(await postData("cart/add", this.content.cards[index]));
 			});
 		});
 
