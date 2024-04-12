@@ -7,6 +7,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const { SubresourceIntegrityPlugin } = require("webpack-subresource-integrity");
+const Dotenv = require('dotenv-webpack');
 
 const babelConfig = require("./babel.config");
 const postcssConfig = require("./postcss.config");
@@ -79,7 +80,8 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: "static/css/[name].[contenthash].css",
 			ignoreOrder: false
-		})
+		}),
+		new Dotenv()
 	],
 
 	module: {

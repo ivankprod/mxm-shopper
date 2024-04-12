@@ -3,6 +3,8 @@ import ElemHTML from "components/ElemHTML";
 import imageLaunches1 from "assets/img/launches/1";
 import imageLaunches2 from "assets/img/launches/2";
 
+import postData from "services/post-data";
+
 import "scss/sections/content-products-launches";
 
 export default class ContentLaunches extends ElemHTML {
@@ -58,6 +60,13 @@ export default class ContentLaunches extends ElemHTML {
 				</div>
 			</div>
 		`);
+
+		this.elem.querySelector("button.cart-btn").addEventListener("click", async () => {
+			alert(await postData("cart/add", {
+				title: "Airdrop 500 Anc",
+				price: 45.99
+			}));
+		});
 
 		return this.render(".wrapper");
 	}

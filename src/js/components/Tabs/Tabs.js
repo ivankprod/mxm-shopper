@@ -1,3 +1,5 @@
+import postData from "services/post-data";
+
 import "./Tabs.scss";
 
 export default class Tabs {
@@ -8,11 +10,11 @@ export default class Tabs {
 
 		this.activeIndex = 0;
 		this.tabsCount = this.tabs.length;
-		this.cards = cards;
+		this.content = cards;
 
-		for (let i = 0; i < this.tabsCount; i++) {
-			this.tabs[i].addEventListener("click", () => this.play(i));
-		}
+		[...this.tabs].map((tab, i) => {
+			tab.addEventListener("click", () => this.play(i));
+		});
 
 		this.tabsButtons[0].addEventListener("click", () => this.prev());
 		this.tabsButtons[1].addEventListener("click", () => this.next());
@@ -23,7 +25,15 @@ export default class Tabs {
 	play(index) {
 		if (index < 0 || index > this.tabsCount - 1) return;
 
-		this.tabsContent.innerHTML = this.cards;
+		this.tabsContent.innerHTML = this.content.html;
+
+		[...this.tabsContent.querySelectorAll("button.card-btn")].map(button => {
+			button.addEventListener("click", async (e) => {
+				const [_, index] = e.currentTarget.dataset.item.split(":");
+
+				alert(await postData("cart/add", this.content.cards[index]));
+			});
+		});
 
 		this.tabs[this.activeIndex].classList.remove("tab_active");
 		this.tabs[index].classList.add("tab_active");
