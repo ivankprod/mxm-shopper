@@ -30,7 +30,7 @@ jobs:
       - name: Install deps & build
         run: npm i && npm run build:prod
         env:
-          API_PATH: ${{ env.API_PATH }}
+          API_PATH: ${{ vars.API_PATH }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
