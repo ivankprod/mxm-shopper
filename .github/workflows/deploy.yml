@@ -28,7 +28,7 @@ jobs:
       - name: Install deps & build
         run: |
           touch .env
-          echo API_URL=API_URL >> .env
+          echo API_URL=$API_URL >> .env
           npm i && npm run build:prod
         env:
           API_URL: ${{ vars.API_URL }}
