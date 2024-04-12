@@ -16,9 +16,7 @@ concurrency:
 jobs:
   deploy:
     name: CD
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    environment: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,7 +28,7 @@ jobs:
       - name: Install deps & build
         run: npm i && npm run build:prod
         env:
-          API_PATH: ${{ vars.API_PATH }}
+          API_URL: ${{ vars.API_URL }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
